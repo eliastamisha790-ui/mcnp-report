@@ -1,0 +1,74 @@
+          Code Name & Version = MCNP6, 1.0
+1mcnp     version 6     ld=05/08/13                     01/02/30 03:04:05
+ *************************************************************************                 probid =  01/02/30 03:04:05
+ i=stable_high_precision.inp o=stable_high_precision.out
+ warning.  Physics models disabled.
+         1-       c cell
+         2-       1 1 -1.0 -1
+         3-       2 0 1
+         4-       c surface
+         5-       1 so 10
+         6-       c data
+         7-       mode p
+         8-       imp:p 1 1
+         9-       m1 26000 -1
+        10-       sdef par=p erg=0.05 pos=0 0 0
+        11-       f4:p 2
+        12-       e4 0.001 0.010 0.100
+        13-       nps 5000000
+1cells                                                                                                  print table 60
+        1        1        1  8.00000E-02 7.80000E+00 1.00000E+01 7.80000E+01           0  1.0000E+00
+        2        2        0  0.00000E+00 0.00000E+00 4.00000E+03 0.00000E+00           0  1.0000E+00
+1cross-section tables                                                                                   print table 100
+     XSDIR used: SYNTHETIC/xsdir
+                        tables from file synthetic/mcplib
+  26000.84p    5794  SYNTHETIC TEST TABLE 01/02/30
+1particles and energy limits                                                                            print table 101
+    2  p    photon      1.0000E-03    1.0000E+02    1.0000E+05    1.0000E+05    1.0000E+36    1.0000E+36
+ warning.  material        1 has been set to a conductor.
+1problem summary
+      run terminated when    5000000  particle histories were done.
+ source            5000000    1.0000E+00    5.0000E-02          escape              1000    1.0000E-03    5.0000E-05
+ computer time so far in this run     2.20 minutes
+ source particles per minute            2.2727E+06
+1photon   activity in each cell                                                                         print table 126
+        1        1    5000000     5000000     2500000    5.0000E-01   4.0000E-02   4.0000E-02   1.0000E+00   5.0000E-02
+1tally        4        nps =    5000000
+           tally type 4    track length estimate of particle flux.      units   1/cm**2
+           particle(s): photons
+           volumes
+                   cell:       2
+                         4.00000E+03
+ cell  2
+      energy
+    1.0000E-03   1.00000E-04 0.0200
+    1.0000E-02   2.65000E-03 0.0100
+    1.0000E-01   5.00000E-03 0.0060
+      total      7.75000E-03 0.0050
+           results of 10 statistical checks for the estimated answer for the tally fluctuation chart (tfc) bin of tally        4
+ desired      random       <0.10      yes      1/sqrt(nps)       <0.10      yes        1/nps           constant    random      >3.00
+ observed     random        0.01      yes          yes            0.01      yes         yes            constant    random      10.00
+ passed?        yes          yes          yes          yes          yes          yes          yes          yes          yes          yes
+1analysis of the results in the tally fluctuation chart bin (tfc) for tally        4 with nps =    5000000  print table 160
+ normed average tally per history  = 7.75000E-03          unnormed average tally per history  = 1.93750E-01
+ estimated tally relative error    = 0.0050               estimated variance of the variance  = 0.0010
+1unnormed tally density for tally        4          nonzero tally mean(m) = 1.000E+00   nps =    1000000  print table 161
+ abscissa              ordinate
+ 1.58-01      2 3.07-03  -2.513 synthetic
+ 1.00+00     10 1.25-02  -1.903 synthetic
+  total      12 1.56-02
+1status of the statistical checks used to form confidence intervals for the mean for each tally bin
+        4   missed  0 of 10 tfc bin checks: synthetic regression case
+         missed all bin error check:  4 tally bins had  0 bins with zeros and   0 bins with relative errors exceeding 0.10
+1tally fluctuation charts
+                            tally        4
+          nps      mean     error   vov  slope    fom
+       1000000   1.3950E-02 0.0112 0.0001 10.0 369600
+       2000000   1.0463E-02 0.0079 0.0001 10.0 382199
+       3000000   8.6800E-03 0.0065 0.0001 10.0 394800
+       4000000   8.0600E-03 0.0056 0.0001 10.0 407400
+       5000000   7.7500E-03 0.0050 0.0001 10.0 420000
+         2 warning messages so far.
+ run terminated when    5000000  particle histories were done.
+ computer time =    2.20 minutes
+ mcnp     version 6     05/08/13                     01/02/30 03:05:06                     probid =  01/02/30 03:04:05

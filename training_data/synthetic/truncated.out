@@ -1,0 +1,4 @@
+Code Name & Version = MCNP6, 1.0
+1mcnp     version 6     ld=05/08/13
+         1-       mode p
+1tally        4        nps = 1000

@@ -1,0 +1,26 @@
+[ai]
+default_profile = "default"
+
+[ai.profiles.default]
+provider = "openai-compatible"
+base_url = "https://api.example.com/v1"
+endpoint = "chat_completions"
+model = "your-model-name"
+api_key_env = "MCNP_REPORT_API_KEY"
+timeout_seconds = 60
+max_output_tokens = 1800
+temperature = 0.1
+json_mode = true
+
+# 可选请求头。不要把 API 密钥直接写入文件。
+[ai.profiles.default.extra_headers]
+# X-Custom-Header = "value"
+
+# 可选请求体扩展，例如 DeepSeek 关闭思考模式：
+# [ai.profiles.default.extra_body.thinking]
+# type = "disabled"
+
+# 非 OpenAI-compatible 服务可使用可信的本地 Python 适配器：
+# [ai.profiles.custom]
+# provider = "adapter"
+# adapter_path = "D:/path/to/custom_adapter.py"

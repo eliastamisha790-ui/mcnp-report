@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcnp-output-report"
+version = "0.2.1"
+description = "MCNP6 1.0 output parser and Chinese Excel report CLI"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "罗俊仁" }]
+dependencies = ["XlsxWriter>=3.2,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "openpyxl>=3.1,<4", "pyinstaller>=6,<7"]
+
+[project.scripts]
+mcnp-report = "mcnp_report.cli:main"
+
+[project.gui-scripts]
+mcnp-report-gui = "mcnp_report.gui:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: large-file and memory tests"]
