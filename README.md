@@ -80,3 +80,7 @@ python -m pytest
 只支持样本对应的 `MCNP6, 1.0` 固定源输出及 F4 tally。MCNP5、MCNP6.2/6.3、KCODE、FMESH、MCTAL、MESHTAL、PTRAC 和其他 tally 类型会拒绝或在审计中明确标记，不会输出未经验证的数据。
 
 测试直接读取 `D:\mcnpproject\1.out` 与 `D:\mcnpproject\ceshi.out`，不会把原始 `.out` 复制进工程。
+
+## 许可证
+
+本项目采用 [Apache License 2.0](LICENSE) 开源许可证。
