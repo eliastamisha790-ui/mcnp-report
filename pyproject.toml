@@ -9,6 +9,8 @@ description = "MCNP6 1.0 output parser and Chinese Excel report CLI"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "罗俊仁" }]
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
 dependencies = ["XlsxWriter>=3.2,<4"]
 
 [project.optional-dependencies]
